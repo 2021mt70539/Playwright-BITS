@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","17999","Atlas Login","chromium","Thu Sep 04 12:19:38 IST 2025","passed","Thu Sep 04 12:19:56 IST 2025","","atlasLogin.spec.js","",""
+"","1472","Atlas Login Logger Test","chromium","Thu Sep 04 12:19:38 IST 2025","passed","Thu Sep 04 12:19:40 IST 2025","","atlasLogin.spec.js","",""
+"","24463","Search Customer Number","chromium","Thu Sep 04 12:19:38 IST 2025","passed","Thu Sep 04 12:20:03 IST 2025","","atlasLogin.spec.js","",""

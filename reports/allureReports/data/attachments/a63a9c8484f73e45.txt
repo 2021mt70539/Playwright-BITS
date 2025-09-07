@@ -1,0 +1,3 @@
+[INFO] 04 September 2025 at 12:19:42.000 - This is INFO Message
+[ERROR] 04 September 2025 at 12:19:42.000 - This is ERROR Message
+[LOG] 04 September 2025 at 12:19:42.000 - This is LOG Message

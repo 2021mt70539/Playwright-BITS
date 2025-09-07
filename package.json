@@ -1,0 +1,26 @@
+{
+  "name": "bits---playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_QA": "cross-env TEST_ENV=QA npx playwright test tests/atlasLoginMultipleEnv.spec.js",
+    "test_FT": "cross-env $env:TEST_ENV='FT';npx playwright test tests/atlasLoginMultipleEnv.spec.js",
+    "generate_allureReport": "allure generate allure-results -o reports/allureReports --clean",
+    "open_allureReport": "allure open reports/allureReports"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.3.3",
+    "cross-env": "^10.0.0",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.1"
+  }
+}
