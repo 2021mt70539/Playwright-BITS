@@ -1,0 +1,4 @@
+[LOG] 15 October 2025 at 16:10:32.000 - User has navigated to the URL
+[LOG] 15 October 2025 at 16:10:32.000 - User has entered Username
+[LOG] 15 October 2025 at 16:10:32.000 - User has entered Passowrd
+[LOG] 15 October 2025 at 16:10:33.000 - User has clicked on Submit Button

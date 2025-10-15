@@ -14,8 +14,7 @@ const istDate = new Date().toLocaleString('en-GB', {
   second: '2-digit',
 }).replace(/[/,: ]/g, '-');
 
-const reportDir = path.join(__dirname, './reports/htmlReports', istDate);
-
+//const reportDir = path.join(__dirname, './reports/htmlReports', istDate);
 
 dotenv.config({
 
@@ -31,12 +30,12 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 1,
+  retries: process.env.CI ? 2 : 2,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["allure-playwright"],['html', { outputFolder: reportDir, open: 'never' }]],
+  reporter: [["allure-playwright"],['html', { outputFolder: './reports/htmlReports', open: 'never' }]],
   //reporter: [['html', { outputFolder: reportDir, open: 'never' }]],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -59,15 +58,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // }
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    }
 
     /* Test against mobile viewports. */
     // {

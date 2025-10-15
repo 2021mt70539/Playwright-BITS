@@ -1,6 +1,6 @@
 const { test,expect } = require('@playwright/test')
 
-const loggerUtil = require('C:\\BITS - Playwright\\utils\\loggerUtil.js')
+const loggerUtil = require('C:\\Users\\user\\Desktop\\BITS - Playwright\\utils\\loggerUtil.js')
 //Without POM - Page Object Model
 
 test('Atlas Login Logger Test', async ({ page }) => {
@@ -12,29 +12,29 @@ test('Atlas Login Logger Test', async ({ page }) => {
 
 test('Atlas Login', async ({ page }) => {
 
-    await page.goto('https://atlasqa.cartus.com/password.aspx');
+    await page.goto('https://atlasft.cartus.com/password.aspx');
     loggerUtil.LOG('User has navigated to the URL')
-    await expect(page).toHaveURL("https://atlasqa.cartus.com/password.aspx")
+    await expect(page).toHaveURL("https://atlasft.cartus.com/password.aspx")
     await expect(page).toHaveTitle("ATLAS LOGIN")
 
     await page.locator('#UserID').fill('atlas422');
     loggerUtil.LOG('User has entered Username')
-    await page.locator('#Passwd').fill('Q3Qa010125');
+    await page.locator('#Passwd').fill('Q3Ft22339933');
     loggerUtil.LOG('User has entered Passowrd')
     await page.locator('#SubmitBtn').click();
     loggerUtil.LOG('User has clicked on Submit Button')
     
     await page.waitForTimeout(5000);
-    await expect(page).toHaveURL("https://atlasqa.cartus.com/default.aspx")
+    await expect(page).toHaveURL("https://atlasft.cartus.com/default.aspx")
     await expect(page).toHaveTitle("ATLAS")
 
 })
 
 test('Search Customer Number', async ({ page }) => {
 
-    await page.goto('https://atlasqa.cartus.com/password.aspx')
+    await page.goto('https://atlasft.cartus.com/password.aspx')
     await page.locator('#UserID').fill('atlas422')
-    await page.locator('#Passwd').fill('Q3Qa010125')
+    await page.locator('#Passwd').fill('Q3Ft22339933')
     await page.locator('#SubmitBtn').click()
     await page.waitForTimeout(5000)
 
